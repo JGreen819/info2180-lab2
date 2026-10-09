@@ -1,0 +1,146 @@
+body {
+font-size: 18px;
+    color: #2D3748;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;     /* sidebar | main */
+  grid-template-rows: auto 1fr auto;    /* header | content | footer */
+  grid-template-areas:
+    "header header"
+    "aside  main"
+    "footer footer";
+  min-height: 100vh;                    /* footer stays at the bottom */
+}
+
+header { grid-area: header; }
+aside  { grid-area: aside; }
+main   { grid-area: main; }
+footer { grid-area: footer; }
+
+
+header {
+    
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #3C8527 ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    p{
+        color: #ffffff;
+    }
+    
+    h1 {
+        color: #ffffff;
+        font-size: 39px;
+    }
+
+}
+
+img {
+    border-radius: 15%;
+    border: 3px solid white;
+
+}
+
+aside {
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    background-color: #ffffff;
+    
+}
+
+.about {
+    h3 {
+        color: #333322;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+.links ul {
+    list-style: none;
+    border-left: 3px solid #2e7d32;
+}
+
+
+
+.links{
+    
+    h3{
+        color:#28651C;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+   a{
+    color: #2879B8;
+   }
+   
+   a:visited {
+    color: #2879B8;
+   }
+}
+
+.about{
+    background-color: #E2E8F0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 30px;
+
+    h2{
+        color: #28651C;
+        font-size: 34px;
+    }
+}
+
+.post {
+    border-bottom: 1px solid #ddd;   /* the divider line */
+    .date-author{
+        color: #667267;
+    }
+}
+
+footer{
+    background-color: #28651C;
+    text-align: center;
+    color: #ffffff;
+}
+
+.post img {
+  width: 140px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+
+
+
+/* first post: image on the right */
+.post:nth-of-type(odd) img {
+    float: right;
+    margin: 0 0 10px 12px;
+}
+
+/* second post: image on the left */
+.post:nth-of-type(even) img {
+    float: left;
+    margin: 0 12px 10px 0;
+}
+
+.post h2 {
+    margin: 0 0 4px;
+   
+}
+
+.post .date-author {
+    margin: 0 0 12px;
+    font-size: 15px;
+}
